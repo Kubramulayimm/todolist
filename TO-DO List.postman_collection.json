@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "b61d8ef0-d084-4409-9d9a-18c035b07918",
+		"name": "TO-DO List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13523777"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Çağrı\",\n  \"surname\": \"Mülayim\",\n  \"email\": \"cagri@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Çağrı\",\n  \"surname\": \"Mülayim\",\n  \"email\": \"cagri@example.com\",\n  \"password\": \"123457\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateActiveOrPassiveUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"cagri@example.com\",\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/updateActiveOrPassiveUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"updateActiveOrPassiveUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/8992e641-996f-485c-b181-7a844e523439",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/8992e641-996f-485c-b181-7a844e523439",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"8992e641-996f-485c-b181-7a844e523439"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/getAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"cagri@example.com\",\n    \"password\": \"123457\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Konser\",\n    \"userId\": \"8992e641-996f-485c-b181-7a844e523439\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"ec486951-3193-4ab8-8cc9-8b77a185fb7f\",\n    \"name\": \"İş\",\n    \"userId\": \"8992e641-996f-485c-b181-7a844e523439\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category/ec486951-3193-4ab8-8cc9-8b77a185fb7f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/ec486951-3193-4ab8-8cc9-8b77a185fb7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"ec486951-3193-4ab8-8cc9-8b77a185fb7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category/ec486951-3193-4ab8-8cc9-8b77a185fb7f Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/list/8992e641-996f-485c-b181-7a844e523439",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"list",
+								"8992e641-996f-485c-b181-7a844e523439"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/category/delete/ec486951-3193-4ab8-8cc9-8b77a185fb7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"delete",
+								"ec486951-3193-4ab8-8cc9-8b77a185fb7f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"8992e641-996f-485c-b181-7a844e523439\",\n    \"title\": \"Task-23 ü bitir\",\n    \"description\": \"Spring Boot ile POST işlemi\",\n    \"dueDate\": \"2025-08-10T15:00:00\",\n    \"priority\": \"HIGH\",\n    \"favorite\": true,\n    \"category\": {\n        \"id\": \"ec486951-3193-4ab8-8cc9-8b77a185fb7f\",\n        \"name\": \"İş\",\n        \"userId\": \"8992e641-996f-485c-b181-7a844e523439\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"0935e890-aa29-4d9c-9e72-135bed137b5a\",\n    \"userId\": \"8992e641-996f-485c-b181-7a844e523439\",\n    \"title\": \"Task-23 ü bitir\",\n    \"description\": \"Spring Boot ile POST işlemi\",\n    \"dueDate\": \"2025-08-10T15:00:00\",\n    \"priority\": \"HIGH\",\n    \"favorite\": true,\n    \"category\": {\n        \"id\": \"ec486951-3193-4ab8-8cc9-8b77a185fb7f\",\n        \"name\": \"İş\",\n        \"userId\": \"8992e641-996f-485c-b181-7a844e523439\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/0935e890-aa29-4d9c-9e72-135bed137b5a",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/0935e890-aa29-4d9c-9e72-135bed137b5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"0935e890-aa29-4d9c-9e72-135bed137b5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/list/8992e641-996f-485c-b181-7a844e523439/category/ec486951-3193-4ab8-8cc9-8b77a185fb7f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/list/8992e641-996f-485c-b181-7a844e523439/category/ec486951-3193-4ab8-8cc9-8b77a185fb7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"list",
+								"8992e641-996f-485c-b181-7a844e523439",
+								"category",
+								"ec486951-3193-4ab8-8cc9-8b77a185fb7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/list/8992e641-996f-485c-b181-7a844e523439",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/list/8992e641-996f-485c-b181-7a844e523439",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"list",
+								"8992e641-996f-485c-b181-7a844e523439"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/getTasksByPriority",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/getTasksByPriority/8992e641-996f-485c-b181-7a844e523439",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"getTasksByPriority",
+								"8992e641-996f-485c-b181-7a844e523439"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/complete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/complete/0935e890-aa29-4d9c-9e72-135bed137b5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"complete",
+								"0935e890-aa29-4d9c-9e72-135bed137b5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/delete/0935e890-aa29-4d9c-9e72-135bed137b5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"delete",
+								"0935e890-aa29-4d9c-9e72-135bed137b5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/removeFavorite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/removeFavorite/0935e890-aa29-4d9c-9e72-135bed137b5a?favorite=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"removeFavorite",
+								"0935e890-aa29-4d9c-9e72-135bed137b5a"
+							],
+							"query": [
+								{
+									"key": "favorite",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task/favorite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task/favorite/0935e890-aa29-4d9c-9e72-135bed137b5a?favorite=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task",
+								"favorite",
+								"0935e890-aa29-4d9c-9e72-135bed137b5a"
+							],
+							"query": [
+								{
+									"key": "favorite",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

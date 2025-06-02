@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: todolist
+  couchbase:
+    connection-string: 127.0.0.1
+    username: admin
+    password: 123456
+  data:
+    couchbase:
+      bucket-name: todo-app
+
+jwt:
+  secret: f9a3c6e1b8d472a095f1e3c8b2a7d6f4c9e1a8d3b7f6c4a9e2d1b8f3a6c9e4d2
+  header: Authorization
+  bearer: Bearer
+  expiration: 1800000
+
+springdoc:
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+
+scheduler:
+  reminders:
+    due-task-cron: "0 0 1 * * *"
